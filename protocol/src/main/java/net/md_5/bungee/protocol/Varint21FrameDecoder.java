@@ -40,10 +40,12 @@ public class Varint21FrameDecoder extends ByteToMessageDecoder
             if ( buf[i] >= 0 )
             {
                 int length = DefinedPacket.readVarInt( Unpooled.wrappedBuffer( buf ) );
+                /*  // CommandCraft 
                 if ( length == 0 )
                 {
                     throw new CorruptedFrameException( "Empty Packet!" );
                 }
+                */ // CommandCraft 
 
                 if ( in.readableBytes() < length )
                 {
