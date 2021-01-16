@@ -32,7 +32,8 @@ public class MinecraftDecoder extends MessageToMessageDecoder<ByteBuf>
 
         try
         {
-            if (in.readableBytes() == 0) {
+            if ( in.readableBytes() == 0 )
+            {
                 return;
             }
             int packetId = DefinedPacket.readVarInt( in );
